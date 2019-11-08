@@ -202,7 +202,7 @@ module.exports = function(
   // Install react and react-dom for backward compatibility with old CRA cli
   // which doesn't install react and react-dom along with brahmos-scripts
   // or template is presetend (via --internal-testing-template)
-  if (!isReactInstalled(appPackage) || template) {
+  if (!isBrahmosInstalled(appPackage) || template) {
     console.log(`Installing brahmos using ${command}...`);
     console.log();
 
@@ -276,11 +276,8 @@ module.exports = function(
   console.log('Happy hacking!');
 };
 
-function isReactInstalled(appPackage) {
+function isBrahmosInstalled(appPackage) {
   const dependencies = appPackage.dependencies || {};
 
-  return (
-    typeof dependencies.react !== 'undefined' &&
-    typeof dependencies['react-dom'] !== 'undefined'
-  );
+  return typeof dependencies.react !== 'undefined';
 }

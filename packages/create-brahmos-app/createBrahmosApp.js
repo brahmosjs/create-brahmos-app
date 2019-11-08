@@ -377,7 +377,7 @@ function run(
   useTypescript
 ) {
   getInstallPackage(version, originalDirectory).then(packageToInstall => {
-    const allDependencies = ['react', 'react-dom', packageToInstall];
+    const allDependencies = ['brahmos', packageToInstall];
     if (useTypescript) {
       allDependencies.push(
         // TODO: get user's node version instead of installing latest
@@ -402,9 +402,9 @@ function run(
         const isOnline = info.isOnline;
         const packageName = info.packageName;
         console.log(
-          `Installing ${chalk.cyan('react')}, ${chalk.cyan(
-            'react-dom'
-          )}, and ${chalk.cyan(packageName)}...`
+          `Installing ${chalk.cyan('brahmos')}, and ${chalk.cyan(
+            packageName
+          )}...`
         );
         console.log();
 
