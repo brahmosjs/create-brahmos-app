@@ -88,13 +88,8 @@ yarn
 startLocalRegistry "$root_path"/tasks/verdaccio.yaml
 
 # Lint own code
-./node_modules/.bin/eslint --max-warnings 0 packages/babel-preset-react-app/
-./node_modules/.bin/eslint --max-warnings 0 packages/confusing-browser-globals/
 ./node_modules/.bin/eslint --max-warnings 0 packages/create-react-app/
-./node_modules/.bin/eslint --max-warnings 0 packages/eslint-config-react-app/
-./node_modules/.bin/eslint --max-warnings 0 packages/react-dev-utils/
 ./node_modules/.bin/eslint --max-warnings 0 packages/react-scripts/
-./node_modules/.bin/eslint --max-warnings 0 packages/react-error-overlay/src/
 
 cd packages/react-error-overlay/
 yarn test
@@ -102,18 +97,6 @@ if [ $AGENT_OS != 'Windows_NT' ]; then
   # Flow started hanging on Windows build agents
   yarn flow
 fi
-cd ../..
-
-cd packages/react-dev-utils/
-yarn test
-cd ../..
-
-cd packages/babel-plugin-named-asset-import/
-yarn test
-cd ../..
-
-cd packages/confusing-browser-globals/
-yarn test
 cd ../..
 
 # ******************************************************************************
