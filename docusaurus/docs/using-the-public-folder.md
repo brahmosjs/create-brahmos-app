@@ -3,7 +3,7 @@ id: using-the-public-folder
 title: Using the Public Folder
 ---
 
-> Note: this feature is available with `react-scripts@0.5.0` and higher.
+> Note: this feature is available with `brahmos-scripts@0.5.0` and higher.
 
 ## Changing the HTML
 
@@ -29,7 +29,7 @@ If you put a file into the `public` folder, it will **not** be processed by Webp
 Inside `index.html`, you can use it like this:
 
 ```html
-<link rel="icon" href="%PUBLIC_URL%/favicon.ico">
+<link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
 ```
 
 Only files inside the `public` folder will be accessible by `%PUBLIC_URL%` prefix. If you need to use a file from `src` or `node_modules`, you’ll have to copy it there to explicitly specify your intention to make this file a part of the build.

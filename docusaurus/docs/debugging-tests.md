@@ -14,7 +14,7 @@ Add the following to the `scripts` section in your project's `package.json`
 
 ```json
 "scripts": {
-    "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache"
+    "test:debug": "brahmos-scripts --inspect-brk test --runInBand --no-cache"
   }
 ```
 
@@ -50,13 +50,8 @@ Use the following [`launch.json`](https://code.visualstudio.com/docs/editor/debu
       "name": "Debug CRA Tests",
       "type": "node",
       "request": "launch",
-      "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/react-scripts",
-      "args": [
-        "test",
-        "--runInBand",
-        "--no-cache",
-        "--watchAll=false"
-      ],
+      "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/brahmos-scripts",
+      "args": ["test", "--runInBand", "--no-cache", "--watchAll=false"],
       "cwd": "${workspaceRoot}",
       "protocol": "inspector",
       "console": "integratedTerminal",

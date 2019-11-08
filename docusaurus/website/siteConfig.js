@@ -12,14 +12,14 @@ const siteConfig = {
   title: 'Create React App', // Title for your website.
   tagline: 'Set up a modern web app by running one command.',
   // For github.io type URLs, you would set the url and baseUrl like:
-  url: 'https://create-react-app.dev',
+  url: 'https://create-brahmos-app.dev',
   baseUrl: '/',
-  cname: 'create-react-app.dev',
+  cname: 'create-brahmos-app.dev',
   editUrl:
-    'https://github.com/facebook/create-react-app/edit/master/docusaurus/docs/',
+    'https://github.com/facebook/create-brahmos-app/edit/master/docusaurus/docs/',
 
   // Used for publishing and more
-  projectName: 'create-react-app',
+  projectName: 'create-brahmos-app',
   organizationName: 'facebook',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
@@ -30,7 +30,7 @@ const siteConfig = {
     { doc: 'getting-started', label: 'Docs' },
     { href: 'https://reactjs.org/community/support.html', label: 'Help' },
     {
-      href: 'https://www.github.com/facebook/create-react-app',
+      href: 'https://www.github.com/facebook/create-brahmos-app',
       label: 'GitHub',
     },
   ],
@@ -82,11 +82,11 @@ const siteConfig = {
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
-  repoUrl: 'https://github.com/facebook/create-react-app',
+  repoUrl: 'https://github.com/facebook/create-brahmos-app',
 
   algolia: {
     apiKey: '3be60f4f8ffc24c75da84857d6323791',
-    indexName: 'create-react-app',
+    indexName: 'create-brahmos-app',
   },
 
   scrollToTop: true,

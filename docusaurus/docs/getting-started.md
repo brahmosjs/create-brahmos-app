@@ -9,12 +9,12 @@ applications. It offers a modern build setup with no configuration.
 ## Quick Start
 
 ```sh
-npx create-react-app my-app
+npx create-brahmos-app my-app
 cd my-app
 npm start
 ```
 
-> If you've previously installed `create-react-app` globally via `npm install -g create-react-app`, we recommend you uninstall the package using `npm uninstall -g create-react-app` to ensure that `npx` always uses the latest version.
+> If you've previously installed `create-brahmos-app` globally via `npm install -g create-brahmos-app`, we recommend you uninstall the package using `npm uninstall -g create-brahmos-app` to ensure that `npx` always uses the latest version.
 
 _([npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) comes with npm 5.2+ and higher, see [instructions for older npm versions](https://gist.github.com/gaearon/4064d3c23a77c74a3614c498a8bb1c5f))_
 
@@ -23,7 +23,7 @@ Then open [http://localhost:3000/](http://localhost:3000/) to see your app.
 When you’re ready to deploy to production, create a minified bundle with `npm run build`.
 
 <p align='center'>
-<img src='https://cdn.rawgit.com/facebook/create-react-app/27b42ac/screencast.svg' width='600' alt='npm start'>
+<img src='https://cdn.rawgit.com/facebook/create-brahmos-app/27b42ac/screencast.svg' width='600' alt='npm start'>
 </p>
 
 ### Get Started Immediately
@@ -41,7 +41,7 @@ To create a new app, you may choose one of the following methods:
 ### npx
 
 ```sh
-npx create-react-app my-app
+npx create-brahmos-app my-app
 ```
 
 _([npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) comes with npm 5.2+ and higher, see [instructions for older npm versions](https://gist.github.com/gaearon/4064d3c23a77c74a3614c498a8bb1c5f))_
@@ -71,7 +71,7 @@ Follow our [Adding TypeScript](adding-typescript.md) documentation to create a T
 When you create a new app, the CLI will use [Yarn](https://yarnpkg.com/) to install dependencies (when available). If you have Yarn installed, but would prefer to use npm, you can append --use-npm to the creation command. For example:
 
 ```sh
-npx create-react-app my-app --use-npm
+npx create-brahmos-app my-app --use-npm
 ```
 
 ## Output
@@ -115,14 +115,14 @@ Runs the app in development mode. Open [http://localhost:3000](http://localhost:
 The page will automatically reload if you make changes to the code. You will see the build errors and lint warnings in the console.
 
 <p align='center'>
-<img src='https://cdn.rawgit.com/marionebl/create-react-app/9f62826/screencast-error.svg' width='600' alt='Build errors'>
+<img src='https://cdn.rawgit.com/marionebl/create-brahmos-app/9f62826/screencast-error.svg' width='600' alt='Build errors'>
 </p>
 
 ### `npm test` or `yarn test`
 
 Runs the test watcher in an interactive mode. By default, runs tests related to files changed since the last commit.
 
-[Read more about testing](https://facebook.github.io/create-react-app/docs/running-tests).
+[Read more about testing](https://facebook.github.io/create-brahmos-app/docs/running-tests).
 
 ### `npm run build` or `yarn build`
 

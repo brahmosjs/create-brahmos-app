@@ -5,10 +5,10 @@
 # LICENSE file in the root directory of this source tree.
 
 # ******************************************************************************
-# This releases an update to the `react-scripts` package.
+# This releases an update to the `brahmos-scripts` package.
 # Don't use `npm publish` for it.
 # Read the release instructions:
-# https://github.com/facebook/create-react-app/blob/master/CONTRIBUTING.md#cutting-a-release
+# https://github.com/facebook/create-brahmos-app/blob/master/CONTRIBUTING.md#cutting-a-release
 # ******************************************************************************
 
 # Start in tasks/ even if run from root directory

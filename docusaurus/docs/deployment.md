@@ -122,7 +122,7 @@ For example:
 
 ### Serving the Same Build from Different Paths
 
-> Note: this feature is available with `react-scripts@0.9.0` and higher.
+> Note: this feature is available with `brahmos-scripts@0.9.0` and higher.
 
 If you are not using the HTML5 `pushState` history API or not using client-side routing at all, it is unnecessary to specify the URL from which your app will be served. Instead, you can put this in your `package.json`:
 
@@ -165,7 +165,7 @@ Variables in `.env.production` will be used as fallback because `NODE_ENV` will 
 The AWS Amplify Console provides continuous deployment and hosting for modern web apps (single page apps and static site generators) with serverless backends. The Amplify Console offers globally available CDNs, easy custom domain setup, feature branch deployments, and password protection.
 
 1. Login to the Amplify Console [here](https://console.aws.amazon.com/amplify/home).
-1. Connect your Create React App repo and pick a branch. If you're looking for a Create React App+Amplify starter, try the [create-react-app-auth-amplify starter](https://github.com/swaminator/create-react-app-auth-amplify) that demonstrates setting up auth in 10 minutes with Create React App.
+1. Connect your Create React App repo and pick a branch. If you're looking for a Create React App+Amplify starter, try the [create-brahmos-app-auth-amplify starter](https://github.com/swaminator/create-brahmos-app-auth-amplify) that demonstrates setting up auth in 10 minutes with Create React App.
 1. The Amplify Console automatically detects the build settings. Choose Next.
 1. Choose _Save and deploy_.
 
@@ -173,9 +173,9 @@ If the build succeeds, the app is deployed and hosted on a global CDN with an am
 
 ## [Azure](https://azure.microsoft.com/)
 
-See [this](https://medium.com/@to_pe/deploying-create-react-app-on-microsoft-azure-c0f6686a4321) blog post on how to deploy your React app to Microsoft Azure.
+See [this](https://medium.com/@to_pe/deploying-create-brahmos-app-on-microsoft-azure-c0f6686a4321) blog post on how to deploy your React app to Microsoft Azure.
 
-See [this](https://medium.com/@strid/host-create-react-app-on-azure-986bc40d5bf2#.pycfnafbg) blog post or [this](https://github.com/ulrikaugustsson/azure-appservice-static) repo for a way to use automatic deployment to Azure App Service.
+See [this](https://medium.com/@strid/host-create-brahmos-app-on-azure-986bc40d5bf2#.pycfnafbg) blog post or [this](https://github.com/ulrikaugustsson/azure-appservice-static) repo for a way to use automatic deployment to Azure App Service.
 
 ## [Firebase](https://firebase.google.com/)
 
@@ -218,7 +218,7 @@ Then run the `firebase init` command from your project’s root. You need to cho
     ✔  Firebase initialization complete!
 ```
 
-IMPORTANT: you need to set proper HTTP caching headers for `service-worker.js` file in `firebase.json` file or you will not be able to see changes after first deployment ([issue #2440](https://github.com/facebook/create-react-app/issues/2440)). It should be added inside `"hosting"` key like next:
+IMPORTANT: you need to set proper HTTP caching headers for `service-worker.js` file in `firebase.json` file or you will not be able to see changes after first deployment ([issue #2440](https://github.com/facebook/create-brahmos-app/issues/2440)). It should be added inside `"hosting"` key like next:
 
 ```json
 {
@@ -252,7 +252,7 @@ For more information see [Firebase Hosting](https://firebase.google.com/docs/hos
 
 ## [GitHub Pages](https://pages.github.com/)
 
-> Note: this feature is available with `react-scripts@0.2.0` and higher.
+> Note: this feature is available with `brahmos-scripts@0.2.0` and higher.
 
 ### Step 1: Add `homepage` to `package.json`
 
@@ -302,8 +302,8 @@ Add the following scripts in your `package.json`:
   "scripts": {
 +   "predeploy": "npm run build",
 +   "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "brahmos-scripts start",
+    "build": "brahmos-scripts build",
 ```
 
 The `predeploy` script will run automatically before `deploy` is run.
@@ -371,7 +371,7 @@ If, when deploying, you get `Cannot read property 'email' of null`, try the foll
 
 ## [Heroku](https://www.heroku.com/)
 
-Use the [Heroku Buildpack for Create React App](https://github.com/mars/create-react-app-buildpack).<br>
+Use the [Heroku Buildpack for Create React App](https://github.com/mars/create-brahmos-app-buildpack).<br>
 You can find instructions in [Deploying React with Zero Configuration](https://blog.heroku.com/deploying-react-with-zero-configuration).
 
 ### Resolving Heroku Deployment Errors
@@ -470,13 +470,13 @@ Out of the box, you are preconfigured for client-side routing compatibility and 
 
 Render offers free [static site](https://render.com/docs/static-sites) hosting with fully managed SSL, a global CDN and continuous auto deploys from GitHub.
 
-Deploy your app in just a few minutes by following the [Create React App deployment guide](https://render.com/docs/deploy-create-react-app).
+Deploy your app in just a few minutes by following the [Create React App deployment guide](https://render.com/docs/deploy-create-brahmos-app).
 
 Use invite code `cra` to sign up or use [this link](https://render.com/i/cra).
 
 ## [S3](https://aws.amazon.com/s3) and [CloudFront](https://aws.amazon.com/cloudfront/)
 
-See this [blog post](https://medium.com/@omgwtfmarc/deploying-create-react-app-to-s3-or-cloudfront-48dae4ce0af) on how to deploy your React app to Amazon Web Services S3 and CloudFront. If you are looking to add a custom domain, HTTPS and continuous deployment see this [blog post](https://medium.com/dailyjs/a-guide-to-deploying-your-react-app-with-aws-s3-including-https-a-custom-domain-a-cdn-and-58245251f081).
+See this [blog post](https://medium.com/@omgwtfmarc/deploying-create-brahmos-app-to-s3-or-cloudfront-48dae4ce0af) on how to deploy your React app to Amazon Web Services S3 and CloudFront. If you are looking to add a custom domain, HTTPS and continuous deployment see this [blog post](https://medium.com/dailyjs/a-guide-to-deploying-your-react-app-with-aws-s3-including-https-a-custom-domain-a-cdn-and-58245251f081).
 
 ## [Surge](https://surge.sh/)
 

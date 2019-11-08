@@ -3,9 +3,9 @@ id: running-tests
 title: Running Tests
 ---
 
-> Note: this feature is available with `react-scripts@0.3.0` and higher.<br>
+> Note: this feature is available with `brahmos-scripts@0.3.0` and higher.<br>
 
-> [Read the migration guide to learn how to enable it in older projects!](https://github.com/facebook/create-react-app/blob/master/CHANGELOG-0.x.md#migrating-from-023-to-030)
+> [Read the migration guide to learn how to enable it in older projects!](https://github.com/facebook/create-brahmos-app/blob/master/CHANGELOG-0.x.md#migrating-from-023-to-030)
 
 Create React App uses [Jest](https://jestjs.io/) as its test runner. To prepare for this integration, we did a [major revamp](https://jestjs.io/blog/2016/09/01/jest-15.html) of Jest so if you heard bad things about it years ago, give it another try.
 
@@ -225,7 +225,7 @@ and then use them in your tests like you normally do.
 
 ## Initializing Test Environment
 
-> Note: this feature is available with `react-scripts@0.4.0` and higher.
+> Note: this feature is available with `brahmos-scripts@0.4.0` and higher.
 
 If your app uses a browser API that you need to mock in your tests or if you just need a global setup before running your tests, add a `src/setupTests.js` to your project. It will be automatically executed before running your tests.
 
@@ -391,10 +391,10 @@ If you know that none of your tests depend on [jsdom](https://github.com/tmpvar/
 
 ```diff
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
--   "test": "react-scripts test"
-+   "test": "react-scripts test --env=node"
+    "start": "brahmos-scripts start",
+    "build": "brahmos-scripts build",
+-   "test": "brahmos-scripts test"
++   "test": "brahmos-scripts test --env=node"
 ```
 
 To help you make up your mind, here is a list of APIs that **need jsdom**:

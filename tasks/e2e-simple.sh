@@ -23,7 +23,7 @@ function cleanup {
   echo 'Cleaning up.'
   cd "$root_path"
   # Uncomment when snapshot testing is enabled by default:
-  # rm ./packages/react-scripts/template/src/__snapshots__/App.test.js.snap
+  # rm ./packages/brahmos-scripts/template/src/__snapshots__/App.test.js.snap
   rm -rf "$temp_app_path"
   # Restore the original NPM and Yarn registry URLs and stop Verdaccio
   stopLocalRegistry
@@ -84,11 +84,11 @@ yarn
 startLocalRegistry "$root_path"/tasks/verdaccio.yaml
 
 # Lint own code
-./node_modules/.bin/eslint --max-warnings 0 packages/create-react-app/
-./node_modules/.bin/eslint --max-warnings 0 packages/react-scripts/
+./node_modules/.bin/eslint --max-warnings 0 packages/create-brahmos-app/
+./node_modules/.bin/eslint --max-warnings 0 packages/brahmos-scripts/
 
 # ******************************************************************************
-# First, test the create-react-app development environment.
+# First, test the create-brahmos-app development environment.
 # This does not affect our users but makes sure we can develop it.
 # ******************************************************************************
 
@@ -113,17 +113,17 @@ yarn start --smoke-test
 publishToLocalRegistry
 
 # ******************************************************************************
-# Install react-scripts prerelease via create-react-app prerelease.
+# Install brahmos-scripts prerelease via create-brahmos-app prerelease.
 # ******************************************************************************
 
 # Install the app in a temporary location
 cd $temp_app_path
-npx create-react-app test-app
+npx create-brahmos-app test-app
 
 # TODO: verify we installed prerelease
 
 # ******************************************************************************
-# Now that we used create-react-app to create an app depending on react-scripts,
+# Now that we used create-brahmos-app to create an app depending on brahmos-scripts,
 # let's make sure all npm scripts are in the working state.
 # ******************************************************************************
 

@@ -23,7 +23,7 @@ source local-registry.sh
 function cleanup {
   echo 'Cleaning up.'
   unset BROWSERSLIST
-  ps -ef | grep 'react-scripts' | grep -v grep | awk '{print $2}' | xargs kill -9
+  ps -ef | grep 'brahmos-scripts' | grep -v grep | awk '{print $2}' | xargs kill -9
   cd "$root_path"
   # TODO: fix "Device or resource busy" and remove ``|| $CI`
   rm -rf "$temp_app_path" "$temp_module_path" || $CI
@@ -89,14 +89,14 @@ publishToLocalRegistry
 
 # Install the app in a temporary location
 cd $temp_app_path
-npx create-react-app test-kitchensink --internal-testing-template="$root_path"/packages/react-scripts/fixtures/kitchensink
+npx create-brahmos-app test-kitchensink --internal-testing-template="$root_path"/packages/brahmos-scripts/fixtures/kitchensink
 
 # Install the test module
 cd "$temp_module_path"
 yarn add test-integrity@^2.0.1
 
 # ******************************************************************************
-# Now that we used create-react-app to create an app depending on react-scripts,
+# Now that we used create-brahmos-app to create an app depending on brahmos-scripts,
 # let's make sure all npm scripts are in the working state.
 # ******************************************************************************
 
@@ -116,7 +116,7 @@ npm link "$temp_module_path/node_modules/test-integrity"
 # Eject...
 echo yes | npm run eject
 
-# Temporary workaround for https://github.com/facebook/create-react-app/issues/6099
+# Temporary workaround for https://github.com/facebook/create-brahmos-app/issues/6099
 rm yarn.lock
 yarn add @babel/plugin-transform-react-jsx-source @babel/plugin-syntax-jsx @babel/plugin-transform-react-jsx @babel/plugin-transform-react-jsx-self
 
