@@ -19,7 +19,7 @@
   },
   "files": [
     "index.js",
-    "createReactApp.js",
+    "createBrahmosApp.js",
     "yarn.lock.cached"
   ],
   "bin": {
