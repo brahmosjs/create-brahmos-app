@@ -18,7 +18,7 @@ function startLocalRegistry {
   yarn config set registry "$custom_registry_url"
 
   # Login so we can publish packages
-  (cd && npx npm-auth-to-token@1.0.0 -u user -p password -e user@example.com -r "$custom_registry_url")
+  (cd && npx npm-auth-to-token@1.0.0 -u someone -p password -e someone@example.com -r "$custom_registry_url")
 }
 
 function stopLocalRegistry {
