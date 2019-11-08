@@ -771,8 +771,7 @@ function setCaretRangeForRuntimeDeps(packageName) {
     process.exit(1);
   }
 
-  makeCaretRange(packageJson.dependencies, 'react');
-  makeCaretRange(packageJson.dependencies, 'react-dom');
+  makeCaretRange(packageJson.dependencies, 'brahmos');
 
   fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, 2) + os.EOL);
 }
