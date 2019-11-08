@@ -572,6 +572,7 @@ module.exports = function(webpackEnv) {
       ],
     },
     plugins: [
+      'brahmos',
       // Generates an `index.html` file with the <script> injected.
       new HtmlWebpackPlugin(
         Object.assign(
