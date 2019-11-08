@@ -1,4 +1,4 @@
-import React from 'react';
+import Brahmos, { Component } from 'brahmos';
 import logo from './logo.svg';
 import './App.css';
 

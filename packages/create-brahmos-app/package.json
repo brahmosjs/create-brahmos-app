@@ -1,13 +1,13 @@
 {
   "name": "create-brahmos-app",
-  "version": "3.2.0",
+  "version": "0.0.1",
   "keywords": [
     "react"
   ],
-  "description": "Create React apps with no build configuration.",
+  "description": "Create Brahmos apps with no build configuration.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/facebook/create-brahmos-app.git",
+    "url": "https://github.com/brahmosjs/create-brahmos-app.git",
     "directory": "packages/create-brahmos-app"
   },
   "license": "MIT",
@@ -15,7 +15,7 @@
     "node": ">=8"
   },
   "bugs": {
-    "url": "https://github.com/facebook/create-brahmos-app/issues"
+    "url": "https://github.com/brahmosjs/create-brahmos-app/issues"
   },
   "files": [
     "index.js",

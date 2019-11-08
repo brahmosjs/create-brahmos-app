@@ -411,25 +411,20 @@ module.exports = function(webpackEnv) {
               include: paths.appSrc,
               loader: require.resolve('babel-loader'),
               options: {
-                customize: require.resolve(
-                  'babel-preset-react-app/webpack-overrides'
-                ),
                 // @remove-on-eject-begin
                 babelrc: false,
                 configFile: false,
-                presets: [require.resolve('babel-preset-react-app')],
                 // Make sure we have a unique cache identifier, erring on the
                 // side of caution.
                 // We remove this when the user ejects because the default
                 // is sane and uses Babel options. Instead of options, we use
-                // the brahmos-scripts and babel-preset-react-app versions.
+                // the brahmos-scripts
                 cacheIdentifier: getCacheIdentifier(
                   isEnvProduction
                     ? 'production'
                     : isEnvDevelopment && 'development',
                   [
                     'babel-plugin-named-asset-import',
-                    'babel-preset-react-app',
                     'react-dev-utils',
                     'brahmos-scripts',
                   ]
@@ -467,12 +462,7 @@ module.exports = function(webpackEnv) {
                 babelrc: false,
                 configFile: false,
                 compact: false,
-                presets: [
-                  [
-                    require.resolve('babel-preset-react-app/dependencies'),
-                    { helpers: true },
-                  ],
-                ],
+                presets: [],
                 cacheDirectory: true,
                 // See #6846 for context on why cacheCompression is disabled
                 cacheCompression: false,
@@ -483,7 +473,6 @@ module.exports = function(webpackEnv) {
                     : isEnvDevelopment && 'development',
                   [
                     'babel-plugin-named-asset-import',
-                    'babel-preset-react-app',
                     'react-dev-utils',
                     'brahmos-scripts',
                   ]

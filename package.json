@@ -6,7 +6,7 @@
   "scripts": {
     "build": "cd packages/brahmos-scripts && node bin/brahmos-scripts.js build",
     "changelog": "lerna-changelog",
-    "create-brahmos-app": "node tasks/cra.js",
+    "create-brahmos-app": "node tasks/cba.js",
     "e2e": "tasks/e2e-simple.sh",
     "e2e:docker": "tasks/local-test.sh",
     "publish": "tasks/publish.sh",
