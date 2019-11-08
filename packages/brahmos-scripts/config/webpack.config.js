@@ -431,6 +431,7 @@ module.exports = function(webpackEnv) {
                 ),
                 // @remove-on-eject-end
                 plugins: [
+                  'brahmos',
                   [
                     require.resolve('babel-plugin-named-asset-import'),
                     {
@@ -572,7 +573,6 @@ module.exports = function(webpackEnv) {
       ],
     },
     plugins: [
-      'brahmos',
       // Generates an `index.html` file with the <script> injected.
       new HtmlWebpackPlugin(
         Object.assign(
