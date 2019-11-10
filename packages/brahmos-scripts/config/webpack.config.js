@@ -374,10 +374,6 @@ module.exports = function(webpackEnv) {
                       process.exit(1);
                     }
                     return eslintConfig;
-                  } else {
-                    return {
-                      extends: [require.resolve('eslint-config-react-app')],
-                    };
                   }
                 })(),
                 useEslintrc: false,

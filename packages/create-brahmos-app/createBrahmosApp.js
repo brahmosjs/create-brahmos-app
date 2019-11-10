@@ -78,7 +78,6 @@ const program = new commander.Command(packageJson.name)
   )
   .option('--use-npm')
   .option('--use-pnp')
-  .option('--typescript')
   .allowUnknownOption()
   .on('--help', () => {
     console.log(`    Only ${chalk.green('<project-directory>')} is required.`);
@@ -117,7 +116,7 @@ const program = new commander.Command(packageJson.name)
     );
     console.log(
       `      ${chalk.cyan(
-        'https://github.com/facebook/create-brahmos-app/issues/new'
+        'https://github.com/brahmosjs/create-brahmos-app/issues/new'
       )}`
     );
     console.log();
@@ -132,7 +131,7 @@ if (program.info) {
         System: ['OS', 'CPU'],
         Binaries: ['Node', 'npm', 'Yarn'],
         Browsers: ['Chrome', 'Edge', 'Internet Explorer', 'Firefox', 'Safari'],
-        npmPackages: ['react', 'react-dom', 'brahmos-scripts'],
+        npmPackages: ['brahmos', 'brahmos-scripts'],
         npmGlobalPackages: ['create-brahmos-app'],
       },
       {
@@ -150,7 +149,9 @@ if (typeof projectName === 'undefined') {
   );
   console.log();
   console.log('For example:');
-  console.log(`  ${chalk.cyan(program.name())} ${chalk.green('my-react-app')}`);
+  console.log(
+    `  ${chalk.cyan(program.name())} ${chalk.green('my-brahmos-app')}`
+  );
   console.log();
   console.log(
     `Run ${chalk.cyan(`${program.name()} --help`)} to see all options.`
@@ -202,7 +203,7 @@ function createApp(
     process.exit(1);
   }
 
-  console.log(`Creating a new React app in ${chalk.green(root)}.`);
+  console.log(`Creating a new Brahmos app in ${chalk.green(root)}.`);
   console.log();
 
   const packageJson = {
@@ -230,7 +231,7 @@ function createApp(
       )
     );
     // Fall back to latest supported brahmos-scripts on Node 4
-    version = 'brahmos-scripts@0.9.x';
+    version = 'brahmos-scripts@0.0.x-alpha';
   }
 
   if (!useYarn) {
@@ -245,7 +246,7 @@ function createApp(
         );
       }
       // Fall back to latest supported brahmos-scripts for npm 3
-      version = 'brahmos-scripts@0.9.x';
+      version = 'brahmos-scripts@0.0.x-alpha';
     }
   } else if (usePnp) {
     const yarnInfo = checkYarnVersion();
@@ -319,7 +320,7 @@ function install(root, useYarn, usePnp, dependencies, verbose, isOnline) {
       [].push.apply(args, dependencies);
 
       // Explicitly set cwd() to work around issues like
-      // https://github.com/facebook/create-brahmos-app/issues/3326.
+      // https://github.com/facebook/create-react-app/issues/3326.
       // Unfortunately we can only do this for Yarn because npm support for
       // equivalent --prefix flag doesn't help with this issue.
       // This is why for npm, we run checkThatNpmCanReadCwd() early instead.
@@ -437,7 +438,7 @@ function run(
       `
         );
 
-        if (version === 'brahmos-scripts@0.9.x') {
+        if (version === 'brahmos-scripts@0.0.x-alpha') {
           console.log(
             chalk.yellow(
               `\nNote: the project was bootstrapped with an old unsupported version of tools.\n` +
@@ -515,7 +516,7 @@ function getInstallPackage(version, originalDirectory) {
     {
       name: 'brahmos-scripts-ts',
       message: chalk.yellow(
-        'The brahmos-scripts-ts package is deprecated. TypeScript is now supported natively in Create React App. You can use the --typescript option instead when generating your app to include TypeScript support. Would you like to continue using brahmos-scripts-ts?'
+        'The brahmos-scripts-ts package is deprecated. TypeScript is now supported natively in Create Brahmos App. You can use the --typescript option instead when generating your app to include TypeScript support. Would you like to continue using brahmos-scripts-ts?'
       ),
     },
   ];
@@ -718,7 +719,7 @@ function checkAppName(appName) {
   }
 
   // TODO: there should be a single place that holds the dependencies
-  const dependencies = ['react', 'react-dom', 'brahmos-scripts'].sort();
+  const dependencies = ['brahmos', 'brahmos-scripts'].sort();
   if (dependencies.indexOf(appName) >= 0) {
     console.error(
       chalk.red(
