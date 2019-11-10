@@ -101,10 +101,10 @@ module.exports = function(
     eject: 'brahmos-scripts eject',
   };
 
-  // Setup the eslint config
-  appPackage.eslintConfig = {
-    extends: 'react-app',
-  };
+  // TODO: Setup the eslint config
+  // appPackage.eslintConfig = {
+  //   extends: 'react-app',
+  // };
 
   // Setup the browsers list
   appPackage.browserslist = defaultBrowsers;
