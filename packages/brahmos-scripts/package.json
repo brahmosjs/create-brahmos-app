@@ -1,10 +1,10 @@
 {
   "name": "brahmos-scripts",
-  "version": "3.2.0",
-  "description": "Configuration and scripts for Create React App.",
+  "version": "0.0.1-alpha",
+  "description": "Configuration and scripts for Create Brahmos App.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/facebook/create-brahmos-app.git",
+    "url": "https://github.com/brahmosjs/create-brahmos-app.git",
     "directory": "packages/brahmos-scripts"
   },
   "license": "MIT",
@@ -12,7 +12,7 @@
     "node": ">=8.10"
   },
   "bugs": {
-    "url": "https://github.com/facebook/create-brahmos-app/issues"
+    "url": "https://github.com/brahmosjs/create-brahmos-app/issues"
   },
   "files": [
     "bin",
