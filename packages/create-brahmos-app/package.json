@@ -1,8 +1,8 @@
 {
   "name": "create-brahmos-app",
-  "version": "0.0.1-alpha",
+  "version": "0.0.2-alpha",
   "keywords": [
-    "react"
+    "brahmos"
   ],
   "description": "Create Brahmos apps with no build configuration.",
   "repository": {
