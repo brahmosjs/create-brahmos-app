@@ -6,7 +6,7 @@ Create React apps with no build configuration.
 - [User Guide](https://facebook.github.io/create-brahmos-app/) – How to develop apps bootstrapped with Create React App.
 
 Create React App works on macOS, Windows, and Linux.<br>
-If something doesn’t work, please [file an issue](https://github.com/facebook/create-brahmos-app/issues/new).<br>
+If something doesn’t work, please [file an issue](https://github.com/facebook/create-react-app/issues/new).<br>
 If you have questions or need help, please ask in our [Spectrum](https://spectrum.chat/create-brahmos-app) community.
 
 ## Quick Overview

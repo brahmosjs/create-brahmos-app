@@ -769,7 +769,7 @@ npm install -g create-brahmos-app@1.0.1
 #### :memo: Documentation
 
 - `brahmos-scripts`
-  - [#1143](https://github.com/facebook/create-brahmos-app/pull/1143) Add deploy to Firebase CDN on template's README (Closes [#374](https://github.com/facebook/create-brahmos-app/issues/374)). ([@guilhermebruzzi](https://github.com/guilhermebruzzi))
+  - [#1143](https://github.com/facebook/create-brahmos-app/pull/1143) Add deploy to Firebase CDN on template's README (Closes [#374](https://github.com/facebook/create-react-app/issues/374)). ([@guilhermebruzzi](https://github.com/guilhermebruzzi))
   - [#1099](https://github.com/facebook/create-brahmos-app/pull/1099) Fix minor typo/grammar. ([@alex-wilmer](https://github.com/alex-wilmer))
   - [#1168](https://github.com/facebook/create-brahmos-app/pull/1168) Add "npm run build silently fails" to Troubleshooting. ([@gaearon](https://github.com/gaearon))
 
@@ -890,7 +890,7 @@ Thanks to [@fson](https://github.com/fson) for cutting this release.
   - [#1078](https://github.com/facebook/create-brahmos-app/pull/1078) Upgrade Jest to 17.0. ([@fson](https://github.com/fson))
   - [#1059](https://github.com/facebook/create-brahmos-app/pull/1059) Use `url-loader` with limit 10k as a default loader. ([@bebbi](https://github.com/bebbi))
 
-    `brahmos-scripts` now treats imports with any unknown file extension as a resource. Files with a size below 10 KB are inlined using a data URI and larger files copied to the build folder. This removes the need for an internal [whitelist of supported file extensions](https://github.com/facebook/create-brahmos-app/issues/667). Any file that's not JS or CSS is now handled the same way.
+    `brahmos-scripts` now treats imports with any unknown file extension as a resource. Files with a size below 10 KB are inlined using a data URI and larger files copied to the build folder. This removes the need for an internal [whitelist of supported file extensions](https://github.com/facebook/create-react-app/issues/667). Any file that's not JS or CSS is now handled the same way.
 
   - [#924](https://github.com/facebook/create-brahmos-app/pull/924) Enable JavaScript source maps in development. ([@ekaradon](https://github.com/ekaradon))
   - [#1058](https://github.com/facebook/create-brahmos-app/pull/1058) Add missing dev argument in build script message. ([@nhajidin](https://github.com/nhajidin))
@@ -1113,7 +1113,7 @@ npm install --save-dev --save-exact brahmos-scripts@0.5.1
 - You can now [specify defaults](https://github.com/facebook/create-brahmos-app/blob/master/packages/brahmos-scripts/template/README.md#adding-development-environment-variables-in-env) for environment variables with `.env` file. ([@ayrton](https://github.com/ayrton) in [#695](https://github.com/facebook/create-brahmos-app/pull/695))
 - Ejecting now generates proper `.babelrc` and `.eslintrc`. ([@fson](https://github.com/fson) in [#689](https://github.com/facebook/create-brahmos-app/pull/689), [@gaearon](https://github.com/gaearon) in [#705](https://github.com/facebook/create-brahmos-app/pull/705))
 - Some React warnings now [include the component stacktrace](https://twitter.com/dan_abramov/status/779308833399332864). ([@gaearon](https://github.com/gaearon) in [#716](https://github.com/facebook/create-brahmos-app/pull/716))
-- `npm start` doesn’t fail in a composed Docker container. ([@arekkas](https://github.com/arekkas) in [#711](https://github.com/facebook/create-brahmos-app/issues/711))
+- `npm start` doesn’t fail in a composed Docker container. ([@arekkas](https://github.com/arekkas) in [#711](https://github.com/facebook/create-react-app/issues/711))
 - The projects generated with `eject` are now cleaner. ([@gaearon](https://github.com/gaearon) in [#723](https://github.com/facebook/create-brahmos-app/pull/723))
 - The project is now managed as a monorepo. ([@ryanyogan](https://github.com/ryanyogan) in [#419](https://github.com/facebook/create-brahmos-app/pull/419), [@fson](https://github.com/fson) in [#678](https://github.com/facebook/create-brahmos-app/pull/678))
 
@@ -1175,7 +1175,7 @@ It contained no changes to the code.
 
 ### Build Dependency (`brahmos-scripts`)
 
-- Fixes a packaging issue that affected npm 2. ([#676](https://github.com/facebook/create-brahmos-app/issues/676))
+- Fixes a packaging issue that affected npm 2. ([#676](https://github.com/facebook/create-react-app/issues/676))
 
 ### Migrating from 0.4.2 to 0.4.3
 
@@ -1228,7 +1228,7 @@ npm install --save-dev --save-exact brahmos-scripts@0.4.2
 
 ### Build Dependency (`brahmos-scripts`)
 
-- We now support (but [don’t recommend](https://github.com/facebook/create-brahmos-app/issues/87#issuecomment-234627904)) `.jsx` file extension. ([@tizmagik](https://github.com/tizmagik) in [#563](https://github.com/facebook/create-brahmos-app/pull/563))
+- We now support (but [don’t recommend](https://github.com/facebook/create-react-app/issues/87#issuecomment-234627904)) `.jsx` file extension. ([@tizmagik](https://github.com/tizmagik) in [#563](https://github.com/facebook/create-brahmos-app/pull/563))
 - Proxy request errors are now printed to the console. ([@cloudmu](https://github.com/cloudmu) in [#502](https://github.com/facebook/create-brahmos-app/pull/502))
 
 ### Migrating from 0.4.0 to 0.4.1
@@ -1405,7 +1405,7 @@ Newly created projects will use `0.2.1` automatically. You **don’t** need to u
 - A few unobtrusive accessibility lint rules have been added ([@evcohen](https://github.com/evcohen) in [#175](https://github.com/facebook/create-brahmos-app/pull/175))
 - A `.babelrc` in parent directory no longer causes an error ([@alexzherdev](https://github.com/alexzherdev) in [#236](https://github.com/facebook/create-brahmos-app/pull/236))
 - Files with `.json` extension are now discovered ([@gaearon](https://github.com/gaearon) in [a11d6a](https://github.com/facebook/create-brahmos-app/commit/a11d6a398f487f9163880dd34667b1d3e14b147a))
-- Bug fixes from transitive dependencies are included ([#126](https://github.com/facebook/create-brahmos-app/issues/126))
+- Bug fixes from transitive dependencies are included ([#126](https://github.com/facebook/create-react-app/issues/126))
 - Linting now works with IDEs if you follow [these](https://github.com/facebook/create-brahmos-app/blob/master/template/README.md#display-lint-output-in-the-editor) instructions ([@keyanzhang](https://github.com/keyanzhang) in [#149](https://github.com/facebook/create-brahmos-app/pull/149))
 - After building, we now print gzipped bundle size ([@lvwrence](https://github.com/lvwrence) in [#229](https://github.com/facebook/create-brahmos-app/pull/229))
 
@@ -1428,7 +1428,7 @@ Inside any created project that has not been ejected, run:
 npm install --save-dev --save-exact brahmos-scripts@0.2.0
 ```
 
-You may need to fix a few lint warnings about missing `<img alt>` tag, but everything else should work out of the box. If you intend to deploy your site to GitHub Pages, you may now [add `homepage` field to `package.json`](https://github.com/facebook/create-brahmos-app/blob/master/template/README.md#deploy-to-github-pages). If you had [issues with integrating editor linter plugins](https://github.com/facebook/create-brahmos-app/issues/124), follow [these new instructions](https://github.com/facebook/create-brahmos-app/blob/master/template/README.md#display-lint-output-in-the-editor).
+You may need to fix a few lint warnings about missing `<img alt>` tag, but everything else should work out of the box. If you intend to deploy your site to GitHub Pages, you may now [add `homepage` field to `package.json`](https://github.com/facebook/create-brahmos-app/blob/master/template/README.md#deploy-to-github-pages). If you had [issues with integrating editor linter plugins](https://github.com/facebook/create-react-app/issues/124), follow [these new instructions](https://github.com/facebook/create-brahmos-app/blob/master/template/README.md#display-lint-output-in-the-editor).
 
 ## 0.1.0 (July 22, 2016)
 

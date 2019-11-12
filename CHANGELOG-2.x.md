@@ -958,7 +958,7 @@ Normally, this shouldn't affect your logic and should make the resulting bundle 
 
 This was a large release, and we might have missed something.
 
-Please [file an issue](https://github.com/facebook/create-brahmos-app/issues/new) and we will try to help.
+Please [file an issue](https://github.com/facebook/create-react-app/issues/new) and we will try to help.
 
 # Migrating from 2.0.0-next.xyz
 

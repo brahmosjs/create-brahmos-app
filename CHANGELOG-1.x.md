@@ -37,7 +37,7 @@ yarn add --exact brahmos-scripts@1.1.5
 
 - `react-dev-utils`
 
-  - [#4250](https://github.com/facebook/create-brahmos-app/pull/4250) Upgrade `detect-port-alt` to fix [#4189](https://github.com/facebook/create-brahmos-app/issues/4189). ([@Timer](https://github.com/Timer))
+  - [#4250](https://github.com/facebook/create-brahmos-app/pull/4250) Upgrade `detect-port-alt` to fix [#4189](https://github.com/facebook/create-react-app/issues/4189). ([@Timer](https://github.com/Timer))
 
 #### Committers: 1
 
@@ -728,7 +728,7 @@ or
 yarn add --exact brahmos-scripts@1.0.12
 ```
 
-**Note:** there’s a [known issue](https://github.com/facebook/create-brahmos-app/issues/3041) that might cause the project to not compile after upgrading. In this case, migrate straight to `1.0.13` which doesn’t have this issue.
+**Note:** there’s a [known issue](https://github.com/facebook/create-react-app/issues/3041) that might cause the project to not compile after upgrading. In this case, migrate straight to `1.0.13` which doesn’t have this issue.
 
 ## 1.0.11 (August 9, 2017)
 
@@ -1502,7 +1502,7 @@ This behavior was confusing and inconsistent depending on the file size.
 
 Importing files with unknown extensions will now always include them into the build and return a valid URL.
 
-If you'd like to import a file's contents as a string, consider [contributing to #1944](https://github.com/facebook/create-brahmos-app/issues/1944).
+If you'd like to import a file's contents as a string, consider [contributing to #1944](https://github.com/facebook/create-react-app/issues/1944).
 For the time being, you must embed assets within an export:
 
 ```js
@@ -1619,7 +1619,7 @@ Finally, create `src/registerServiceWorker.js` with [this template](https://gith
 
 This was a large release, and we might have missed something.
 
-Please [file an issue](https://github.com/facebook/create-brahmos-app/issues/new) and we will try to help.
+Please [file an issue](https://github.com/facebook/create-react-app/issues/new) and we will try to help.
 
 ### Detailed Changelog
 
@@ -1715,7 +1715,7 @@ Please [file an issue](https://github.com/facebook/create-brahmos-app/issues/new
 - `eslint-config-react-app`
   - [#2064](https://github.com/facebook/create-brahmos-app/pull/2064) Removing a stylistic lint rule. ([@anilreddykatta](https://github.com/anilreddykatta))
   - [#1763](https://github.com/facebook/create-brahmos-app/pull/1763) disable ignoring unused vars prefixed with \_. ([@doshisid](https://github.com/doshisid))
-  - [#1989](https://github.com/facebook/create-brahmos-app/pull/1989) Relax label rules (Closes [#1835](https://github.com/facebook/create-brahmos-app/issues/1835)). ([@anilreddykatta](https://github.com/anilreddykatta))
+  - [#1989](https://github.com/facebook/create-brahmos-app/pull/1989) Relax label rules (Closes [#1835](https://github.com/facebook/create-react-app/issues/1835)). ([@anilreddykatta](https://github.com/anilreddykatta))
   - [#1773](https://github.com/facebook/create-brahmos-app/pull/1773) Remove 'guard-for-in' lint rule. ([@spicyj](https://github.com/spicyj))
 - `eslint-config-react-app`, `brahmos-scripts`
   - [#2130](https://github.com/facebook/create-brahmos-app/pull/2130) Blacklist confusing global variables. ([@doshisid](https://github.com/doshisid))

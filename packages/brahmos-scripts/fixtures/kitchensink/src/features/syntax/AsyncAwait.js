@@ -13,7 +13,7 @@ async function load() {
 }
 
 /* eslint-disable */
-// Regression test for https://github.com/facebook/create-brahmos-app/issues/3055
+// Regression test for https://github.com/facebook/create-react-app/issues/3055
 const x = async (
   /* prettier-ignore */
   y: void
