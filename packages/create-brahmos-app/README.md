@@ -23,3 +23,7 @@ npm run build
 ```sh
 npm run eject
 ```
+
+## License
+
+**create-brahmos-app** is [MIT Licensed](./LICENSE)
