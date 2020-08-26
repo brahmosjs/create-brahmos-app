@@ -1,6 +1,6 @@
 {
   "name": "brahmos-scripts",
-  "version": "0.0.5-alpha",
+  "version": "0.0.6-alpha",
   "description": "Configuration and scripts for Create Brahmos App.",
   "repository": {
     "type": "git",
@@ -29,14 +29,18 @@
   "types": "./lib/react-app.d.ts",
   "dependencies": {
     "@babel/core": "7.6.0",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.11.0",
+    "@babel/plugin-transform-runtime": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
     "@svgr/webpack": "4.3.2",
     "@typescript-eslint/eslint-plugin": "^2.2.0",
     "@typescript-eslint/parser": "^2.2.0",
     "babel-eslint": "10.0.3",
     "babel-jest": "^24.9.0",
     "babel-loader": "8.0.6",
-    "babel-plugin-named-asset-import": "^0.3.4",
     "babel-plugin-brahmos": "0.5.1",
+    "babel-plugin-named-asset-import": "^0.3.4",
     "camelcase": "^5.2.0",
     "case-sensitive-paths-webpack-plugin": "2.2.0",
     "css-loader": "2.1.1",

@@ -420,9 +420,17 @@ module.exports = function(webpackEnv) {
                     'brahmos-scripts',
                   ]
                 ),
+                presets: ['@babel/preset-env'],
                 // @remove-on-eject-end
                 plugins: [
                   'brahmos',
+                  '@babel/plugin-transform-runtime',
+                  '@babel/plugin-proposal-class-properties',
+                  [
+                    '@babel/plugin-proposal-object-rest-spread',
+                    {},
+                    'rest-spread',
+                  ],
                   [
                     require.resolve('babel-plugin-named-asset-import'),
                     {
