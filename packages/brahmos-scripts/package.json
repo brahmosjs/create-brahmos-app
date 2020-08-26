@@ -1,6 +1,6 @@
 {
   "name": "brahmos-scripts",
-  "version": "0.0.4-alpha",
+  "version": "0.0.5-alpha",
   "description": "Configuration and scripts for Create Brahmos App.",
   "repository": {
     "type": "git",
