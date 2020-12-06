@@ -37,13 +37,13 @@ module.exports = class TestSetup {
     const shouldInstallScripts = !this.isLocal;
     if (shouldInstallScripts) {
       packageJson.dependencies = Object.assign({}, packageJson.dependencies, {
-        'react-scripts': 'latest',
+        'brahmos-scripts': 'latest',
       });
     }
     packageJson.scripts = Object.assign({}, packageJson.scripts, {
-      start: 'react-scripts start',
-      build: 'react-scripts build',
-      test: 'react-scripts test',
+      start: 'brahmos-scripts start',
+      build: 'brahmos-scripts build',
+      test: 'brahmos-scripts test',
     });
     packageJson.license = packageJson.license || 'UNLICENSED';
     await fs.writeJson(
@@ -71,14 +71,14 @@ module.exports = class TestSetup {
             __dirname,
             '../../../..',
             'packages',
-            'react-scripts',
+            'brahmos-scripts',
             'bin',
-            'react-scripts.js'
+            'brahmos-scripts.js'
           )
         ),
-        path.join(this.testDirectory, 'node_modules', '.bin', 'react-scripts')
+        path.join(this.testDirectory, 'node_modules', '.bin', 'brahmos-scripts')
       );
-      await execa('yarnpkg', ['link', 'react-scripts'], {
+      await execa('yarnpkg', ['link', 'brahmos-scripts'], {
         cwd: this.testDirectory,
       });
     }

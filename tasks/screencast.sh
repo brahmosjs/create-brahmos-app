@@ -1,8 +1,5 @@
 #!/bin/zsh
-# Copyright (c) 2015-present, Facebook, Inc.
-#
-# This source code is licensed under the MIT license found in the
-# LICENSE file in the root directory of this source tree.
+# This source code is forked from https://github.com/facebook/create-react-app
 
 # ******************************************************************************
 # This is an end-to-end test intended to be run via screencast.js
@@ -11,8 +8,8 @@
 set -e
 
 printf '\e[32m%s\e[m' "λ "
-echo "npx create-react-app my-app" | pv -qL $[10+(-2 + RANDOM%5)]
-npx create-react-app my-app
+echo "npx create-brahmos-app my-app" | pv -qL $[10+(-2 + RANDOM%5)]
+npx create-brahmos-app my-app
 
 printf '\e[32m%s\e[m' "λ "
 sleep 1

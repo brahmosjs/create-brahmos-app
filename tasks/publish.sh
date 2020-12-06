@@ -1,14 +1,11 @@
 #!/bin/bash
-# Copyright (c) 2015-present, Facebook, Inc.
-#
-# This source code is licensed under the MIT license found in the
-# LICENSE file in the root directory of this source tree.
+# This source code is forked from https://github.com/facebook/create-react-app
 
 # ******************************************************************************
-# This releases an update to the `react-scripts` package.
+# This releases an update to the `brahmos-scripts` package.
 # Don't use `npm publish` for it.
 # Read the release instructions:
-# https://github.com/facebook/create-react-app/blob/master/CONTRIBUTING.md#cutting-a-release
+# https://github.com/facebook/create-brahmos-app/blob/master/CONTRIBUTING.md#cutting-a-release
 # ******************************************************************************
 
 # Start in tasks/ even if run from root directory
@@ -34,11 +31,6 @@ if [ -n "$(git status --porcelain)" ]; then
   echo "Your git status is not clean. Aborting.";
   exit 1;
 fi
-
-# Compile
-cd packages/react-error-overlay/
-npm run build:prod
-cd ../..
 
 # Get 2FA when not CI
 otp=""

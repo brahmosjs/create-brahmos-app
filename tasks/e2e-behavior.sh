@@ -1,8 +1,5 @@
 #!/bin/bash
-# Copyright (c) 2015-present, Facebook, Inc.
-#
-# This source code is licensed under the MIT license found in the
-# LICENSE file in the root directory of this source tree.
+# This source code is forked from https://github.com/facebook/create-react-app
 
 # ******************************************************************************
 # This is an end-to-end kitchensink test intended to run on CI.
@@ -21,7 +18,7 @@ source local-registry.sh
 
 function cleanup {
   echo 'Cleaning up.'  
-  ps -ef | grep 'react-scripts' | grep -v grep | awk '{print $2}' | xargs kill -9
+  ps -ef | grep 'brahmos-scripts' | grep -v grep | awk '{print $2}' | xargs kill -9
   cd "$root_path"
   # Restore the original NPM and Yarn registry URLs and stop Verdaccio
   stopLocalRegistry

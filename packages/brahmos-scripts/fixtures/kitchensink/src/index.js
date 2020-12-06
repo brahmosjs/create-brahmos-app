@@ -1,0 +1,7 @@
+/** This source code is forked from https://github.com/facebook/create-react-app **/
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+
+ReactDOM.render(<App />, document.getElementById('root'));

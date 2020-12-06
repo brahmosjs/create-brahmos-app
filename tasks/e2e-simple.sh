@@ -1,8 +1,5 @@
 #!/bin/bash
-# Copyright (c) 2015-present, Facebook, Inc.
-#
-# This source code is licensed under the MIT license found in the
-# LICENSE file in the root directory of this source tree.
+# This source code is forked from https://github.com/facebook/create-react-app
 
 # ******************************************************************************
 # This is an end-to-end test intended to run on CI.
@@ -23,7 +20,7 @@ function cleanup {
   echo 'Cleaning up.'
   cd "$root_path"
   # Uncomment when snapshot testing is enabled by default:
-  # rm ./packages/react-scripts/template/src/__snapshots__/App.test.js.snap
+  # rm ./packages/brahmos-scripts/template/src/__snapshots__/App.test.js.snap
   rm -rf "$temp_app_path"
   # Restore the original NPM and Yarn registry URLs and stop Verdaccio
   stopLocalRegistry
@@ -64,11 +61,7 @@ cd ..
 root_path=$PWD
 
 # Make sure we don't introduce accidental references to PATENTS.
-EXPECTED='packages/react-error-overlay/fixtures/bundle.mjs
-packages/react-error-overlay/fixtures/bundle.mjs.map
-packages/react-error-overlay/fixtures/bundle_u.mjs
-packages/react-error-overlay/fixtures/bundle_u.mjs.map
-tasks/e2e-simple.sh'
+EXPECTED='tasks/e2e-simple.sh'
 ACTUAL=$(git grep -l PATENTS)
 if [ "$EXPECTED" != "$ACTUAL" ]; then
   echo "PATENTS crept into some new files?"
@@ -88,36 +81,11 @@ yarn
 startLocalRegistry "$root_path"/tasks/verdaccio.yaml
 
 # Lint own code
-./node_modules/.bin/eslint --max-warnings 0 packages/babel-preset-react-app/
-./node_modules/.bin/eslint --max-warnings 0 packages/confusing-browser-globals/
-./node_modules/.bin/eslint --max-warnings 0 packages/create-react-app/
-./node_modules/.bin/eslint --max-warnings 0 packages/eslint-config-react-app/
-./node_modules/.bin/eslint --max-warnings 0 packages/react-dev-utils/
-./node_modules/.bin/eslint --max-warnings 0 packages/react-scripts/
-./node_modules/.bin/eslint --max-warnings 0 packages/react-error-overlay/src/
-
-cd packages/react-error-overlay/
-yarn test
-if [ $AGENT_OS != 'Windows_NT' ]; then
-  # Flow started hanging on Windows build agents
-  yarn flow
-fi
-cd ../..
-
-cd packages/react-dev-utils/
-yarn test
-cd ../..
-
-cd packages/babel-plugin-named-asset-import/
-yarn test
-cd ../..
-
-cd packages/confusing-browser-globals/
-yarn test
-cd ../..
+./node_modules/.bin/eslint --max-warnings 0 packages/create-brahmos-app/
+./node_modules/.bin/eslint --max-warnings 0 packages/brahmos-scripts/
 
 # ******************************************************************************
-# First, test the create-react-app development environment.
+# First, test the create-brahmos-app development environment.
 # This does not affect our users but makes sure we can develop it.
 # ******************************************************************************
 
@@ -142,17 +110,17 @@ yarn start --smoke-test
 publishToLocalRegistry
 
 # ******************************************************************************
-# Install react-scripts prerelease via create-react-app prerelease.
+# Install brahmos-scripts prerelease via create-brahmos-app prerelease.
 # ******************************************************************************
 
 # Install the app in a temporary location
 cd $temp_app_path
-npx create-react-app test-app
+npx create-brahmos-app test-app
 
 # TODO: verify we installed prerelease
 
 # ******************************************************************************
-# Now that we used create-react-app to create an app depending on react-scripts,
+# Now that we used create-brahmos-app to create an app depending on brahmos-scripts,
 # let's make sure all npm scripts are in the working state.
 # ******************************************************************************
 

@@ -1,8 +1,5 @@
 #!/bin/bash
-# Copyright (c) 2015-present, Facebook, Inc.
-#
-# This source code is licensed under the MIT license found in the
-# LICENSE file in the root directory of this source tree.
+# This source code is forked from https://github.com/facebook/create-react-app
 
 # ******************************************************************************
 # This is an end-to-end kitchensink test intended to run on CI.
@@ -23,7 +20,7 @@ source local-registry.sh
 function cleanup {
   echo 'Cleaning up.'
   unset BROWSERSLIST
-  ps -ef | grep 'react-scripts' | grep -v grep | awk '{print $2}' | xargs kill -9
+  ps -ef | grep 'brahmos-scripts' | grep -v grep | awk '{print $2}' | xargs kill -9
   cd "$root_path"
   # TODO: fix "Device or resource busy" and remove ``|| $CI`
   rm -rf "$temp_app_path" "$temp_module_path" || $CI
@@ -89,14 +86,14 @@ publishToLocalRegistry
 
 # Install the app in a temporary location
 cd $temp_app_path
-npx create-react-app test-kitchensink --internal-testing-template="$root_path"/packages/react-scripts/fixtures/kitchensink
+npx create-brahmos-app test-kitchensink --internal-testing-template="$root_path"/packages/brahmos-scripts/fixtures/kitchensink
 
 # Install the test module
 cd "$temp_module_path"
 yarn add test-integrity@^2.0.1
 
 # ******************************************************************************
-# Now that we used create-react-app to create an app depending on react-scripts,
+# Now that we used create-brahmos-app to create an app depending on brahmos-scripts,
 # let's make sure all npm scripts are in the working state.
 # ******************************************************************************
 
