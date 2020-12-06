@@ -1,6 +1,6 @@
 {
   "name": "brahmos-scripts",
-  "version": "0.0.6-alpha",
+  "version": "0.0.7-alpha",
   "description": "Configuration and scripts for Create Brahmos App.",
   "repository": {
     "type": "git",
@@ -39,7 +39,7 @@
     "babel-eslint": "10.0.3",
     "babel-jest": "^24.9.0",
     "babel-loader": "8.0.6",
-    "babel-plugin-brahmos": "0.5.1",
+    "babel-plugin-brahmos": "0.6.1",
     "babel-plugin-named-asset-import": "^0.3.4",
     "camelcase": "^5.2.0",
     "case-sensitive-paths-webpack-plugin": "2.2.0",
