@@ -314,6 +314,9 @@ module.exports = function(webpackEnv) {
           'react-dom$': 'react-dom/profiling',
           'scheduler/tracing': 'scheduler/tracing-profiling',
         }),
+        react: 'brahmos',
+        'react-dom': 'brahmos',
+        'react/jsx-runtime': 'brahmos',
         ...(modules.webpackAliases || {}),
       },
       plugins: [
